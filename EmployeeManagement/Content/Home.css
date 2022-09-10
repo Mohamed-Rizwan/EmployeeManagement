@@ -1,0 +1,90 @@
+﻿
+
+a.search:link, a.search:visited {
+    background-color: #161678;
+    color: white;
+    padding: 30px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.search:hover, a.search:active {
+    background-color: navy;
+    color: deeppink;
+  
+}
+
+a.Employee:link, a.Employee:visited {
+    background-color: #161678;
+    color: white;
+    padding: 30px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.Employee:hover, a.Employee:active {
+    background-color: navy;
+    color: deeppink;
+    
+}
+
+a.Team:link, a.Team:visited {
+    background-color: #161678;
+    color: white;
+    padding: 50px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.Team:hover, a.Team:active {
+    background-color: navy;
+    color: deeppink;
+   
+}
+
+a.Project:link, a.Project:visited {
+    background-color: #161678;
+    color: white;
+    padding: 50px 49px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.Project:hover, a.Project:active {
+    background-color: navy;
+    color:deeppink;
+  
+}
+
+a.salary:link, a.salary:visited {
+    background-color: #161678;
+    color: white;
+    padding: 50px 59px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.salary:hover, a.salary:active {
+    background-color: navy;
+    color: deeppink;
+   
+}
+
+.rows{
+    width: 100%;
+    margin: 10px;
+    padding:0px;
+    
+}
+
+.block {
+    width: 100px;
+    padding:30px 190px;
+    float: left;
+    
+}

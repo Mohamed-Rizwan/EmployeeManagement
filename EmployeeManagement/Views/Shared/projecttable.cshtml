@@ -1,0 +1,20 @@
+﻿@model System.Data.DataTable
+<tr>
+    <th>Project Id</th>
+    <th>Project Name</th>
+    <th>Team</th>
+    <th>Project Status</th>
+    <th></th>
+    <th></th>
+</tr>
+@for (int i = 0; i < Model.Rows.Count; i++)
+{
+    <tr>
+        <td>@Model.Rows[i][0]</td>
+        <td>@Model.Rows[i][1]</td>
+        <td>@Model.Rows[i][2]</td>
+        <td>@Model.Rows[i][3]</td>
+        <td><a href="@Url.Action("updateproject", "Project", new { @id = Model.Rows[i][0] })">Update Project Details</a></td>
+        <td><a style="cursor:pointer" onclick="Delete('@Url.Action("Delete", "Project", new { @id = Model.Rows[i][0] })')">Delete</a></td>
+    </tr>
+}

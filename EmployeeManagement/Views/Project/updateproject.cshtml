@@ -1,0 +1,37 @@
+﻿@model EmployeeManagement.Models.ProjectDetails
+@{
+    ViewBag.Title = "updateproject";
+}
+@Styles.Render("~/content/Form.css")
+<h2>Update Project</h2>
+
+@using(Html.BeginForm("updateproject", "Project", FormMethod.Post)) {
+    @Html.HiddenFor(m=>m.ProjectId)
+<div>
+
+    @Html.LabelFor(m => m.ProjectName)
+    <br />
+    @Html.TextBoxFor(m => m.ProjectName)
+    @Html.ValidationMessageFor(m => m.ProjectName)
+    <br />
+
+    @Html.LabelFor(m => m.TeamId)
+    <br />
+    @Html.DropDownListFor(m => m.TeamId, ViewBag.TeamList as SelectList, "--select--")
+    @Html.ValidationMessageFor(m => m.TeamId)
+    <br />
+
+    @Html.LabelFor(m => m.projectstatus)
+    <br />
+    @Html.DropDownListFor(m => m.projectstatus, new List<SelectListItem> { new SelectListItem { Text="Yet to start", Value="Yet to start"},
+new SelectListItem{Text="On Going", Value="On Going"},
+new SelectListItem{Text="Completed",Value="Completed"}})
+    <br />
+
+
+
+    <input type="submit" value="submit" />
+</div>
+    
+    
+}

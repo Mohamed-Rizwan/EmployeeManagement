@@ -1,0 +1,30 @@
+﻿a.add:link, a.add:visited {
+    background-color: #161678;
+    color: white;
+    padding: 30px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin:20px;
+}
+
+a.add:hover, a.add:active {
+    background-color: navy;
+    color: deeppink;
+}
+
+a.view:link, a.view:visited {
+    background-color: #161678;
+    color: white;
+    padding: 30px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin:20px;
+   
+}
+
+a.view:hover, a.view:active {
+    background-color: navy;
+    color: deeppink;
+}

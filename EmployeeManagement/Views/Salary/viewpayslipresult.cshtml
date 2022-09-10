@@ -1,0 +1,16 @@
+﻿@model System.Data.DataTable
+@{
+    ViewBag.Title = "viewpayslipresult";
+}
+@if (Model.Rows.Count > 0) {<h2>PaySlip</h2>
+<h3><b>Employee Name :</b>@Model.Rows[0]["EmpName"]</h3>
+<h3><b>Salary ID :</b>@Model.Rows[0]["SalaryId"]</h3>
+<h3><b>Salary Amount :</b>@Model.Rows[0]["SalaryAmt"]</h3>
+<h3><b>Payslip ID :</b>@Model.Rows[0]["PayslipId"]</h3>
+<h3><b>Salary Date :</b>@Convert.ToDateTime(Model.Rows[0]["Salarydate"]).ToShortDateString()</h3>
+<h3><b>Pay Status :</b>@Model.Rows[0]["paystatus"]</h3>
+ }
+
+
+
+

@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "hiketocompany";
+}
+
+<h2>hiketocompany</h2>
+
+@using (Html.BeginForm("hiketocompany","Salary",FormMethod.Post)) { 
+    <h3>Enter hike percentage</h3>
+    <input type="number" value="hike" id="hike" name="hike" placeholder="Enter hike percentage"/>
+    <input type="submit" value="Credit" />
+}

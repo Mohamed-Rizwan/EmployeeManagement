@@ -1,0 +1,25 @@
+﻿@model EmployeeManagement.Models.TeamDetails
+
+@{
+    ViewBag.Title = "addteams";
+}
+@Styles.Render("~/Content/Form.css")
+
+<h2>Addteams</h2>
+
+@using(Html.BeginForm("addteams", "Teams", FormMethod.Post)){ 
+
+    <div> @Html.TextBoxFor(m => m.TeamName, new {placeholder="Team Name"})
+        @Html.ValidationMessageFor(m=>m.TeamName)
+    <br />
+
+     @Html.TextBoxFor(m => m.managerid, new {placeholder="Manager Id"})
+        @Html.ValidationMessageFor(m=>m.managerid)
+    <br />
+
+    <input type="submit" value="submit" /> 
+
+    </div>
+
+}
+

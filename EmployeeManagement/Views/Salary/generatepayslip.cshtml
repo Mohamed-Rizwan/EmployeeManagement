@@ -1,0 +1,24 @@
+﻿@model EmployeeManagement.Models.payslip
+@{
+    ViewBag.Title = "generatepayslip";
+}
+
+<h1>@ViewBag.status</h1>
+
+<h2>generatepayslip</h2>
+<link href="~/Content/Form.css" rel="stylesheet" />
+
+@using (Html.BeginForm("generatepayslip", "Salary", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.salaryid)
+    <br />
+    @Html.TextBoxFor(m => m.salaryid);
+    @Html.ValidationMessageFor(m => m.salaryid);
+    <br />
+    @Html.TextBoxFor(m => m.Date, new { type = "date" })
+    <br />
+    @Html.HiddenFor(m => m.salarystatus)
+    <br />
+    <input type="submit" value="Generate" />
+
+}

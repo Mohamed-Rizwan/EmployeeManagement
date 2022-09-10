@@ -1,0 +1,33 @@
+﻿@model System.Data.DataTable
+@{
+    ViewBag.Title = "viewsalarybyemployee";
+}
+<br />
+
+@using (Html.BeginForm("viewsalarybyemployee","Salary",FormMethod.Post)) {
+    <input type="text" name="id" id="id" placeholder="Employee ID" />
+    <input type="submit" value="search" />
+}
+<br />
+
+@if (Model.Rows.Count > 0) { 
+   
+    <table>
+        <tr>
+            <td><b>Employee Name:</b></td>
+            <td>@Model.Rows[0][0]</td>
+        </tr>
+        <tr>
+            <td><b>Salary ID:</b></td>
+            <td>@Model.Rows[0][1]</td>
+        </tr>
+        <tr>
+            <td><b>Salary:</b></td>
+            <td>₹ @Model.Rows[0][2]</td>
+        </tr>
+    </table>
+}
+
+
+
+

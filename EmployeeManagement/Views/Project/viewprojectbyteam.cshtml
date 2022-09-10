@@ -1,0 +1,26 @@
+﻿@model System.Data.DataTable
+@{
+    ViewBag.Title = "viewprojectbyteam";
+}
+@Styles.Render("~/Content/Table.css")
+
+<h2>Projects</h2>
+<h3>Total Project Undertaken : @Model.Rows.Count</h3>
+<table class="tables">
+    <tr>
+        <th>Project Id </th>
+        <th>Project Name</th>
+        <th>Project Status</th>
+        <th></th>
+    </tr>
+    @for(int i = 0; i < Model.Rows.Count; i++)
+            {
+                <tr>
+                    <td>@Model.Rows[i][0]</td>
+                    <td>@Model.Rows[i][1]</td>
+                    <td>@Model.Rows[i][3]</td>
+                    <td><a href="@Url.Action("updateproject", "Project", new { @id = Model.Rows[i][0] })">Update Project Details</a></td>
+                </tr>
+            }
+</table>
+

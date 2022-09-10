@@ -1,0 +1,21 @@
+﻿@model EmployeeManagement.Models.payslip
+@{
+    ViewBag.Title = "viewpayslip";
+}
+<link href="~/Content/Form.css" rel="stylesheet" />
+<h2>viewpayslip</h2>
+
+@using (Html.BeginForm("viewpayslipresult", "Salary", FormMethod.Post)) {
+    @Html.LabelFor(m => m.salaryid);
+    <br />
+    @Html.TextBoxFor(m => m.salaryid);
+    <br />
+    @Html.LabelFor(m => m.Date);
+    <br />
+    @Html.TextBoxFor(m => m.Date, new { type = "date" });
+    <br />
+    <input type="submit" value="Search" />
+
+
+
+}

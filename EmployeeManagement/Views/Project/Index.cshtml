@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@Styles.Render("~/Content/project.css")
+<center>
+      <a class="add" href="@Url.Action("addprojects","project")"><i class="glyphicon glyphicon-plus" style="font-size:25px;color:white;"></i><h1>Add Project</h1></a>
+  
+   
+      <a class="view" href="@Url.Action("viewproject","project")"><i class="glyphicon glyphicon-eye-open" style="font-size:25px;color:white;"></i><h1>View Projects</h1></a>
+ 
+</center>
+

@@ -1,0 +1,31 @@
+﻿@model System.Data.DataTable
+@{
+    ViewBag.Title = "EmpView";
+}
+@Styles.Render("~/Content/Card.css")
+<center>
+    <h2>Employee Details</h2>
+
+
+    <div class="card">
+        <div class="containers">
+            <p class="p"><b>Employee ID :</b> @Model.Rows[0][0] </p>
+
+            <p class="p"><b>Employee Name :</b> @Model.Rows[0][1] </p>
+            <p class="p"><b>Gender :</b> @Model.Rows[0][2] </p>
+            <p class="p"><b>Email :</b> @Model.Rows[0][3] </p>
+            <p class="p"><b>Phone Number :</b> @Model.Rows[0][4] </p>
+            <p class="p"><b>Job Role :</b> @Model.Rows[0][5] </p>
+            <p class="p"><b>Team :</b> @Model.Rows[0][7] </p>
+            <p class="p"><b>Date Of Joining :</b> @((Convert.ToDateTime(Model.Rows[0][6].ToString())).ToShortDateString()) </p>
+
+
+
+        </div>
+        <a class="Delete" href="@Url.Action("Delete", "Employee", new { @id = Model.Rows[0][0]})" onclick="return confirm('Are you sure of deleting?');">Delete</a>
+        <a class="edit" href="@Url.Action("Edit", "Employee", new { @id = Model.Rows[0][0] })">Edit</a>
+
+    </div>
+</center>
+
+

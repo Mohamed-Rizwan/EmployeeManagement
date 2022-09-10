@@ -1,0 +1,22 @@
+﻿@model EmployeeManagement.Models.Salary
+@{
+    ViewBag.Title = "AddSalary";
+}
+@Styles.Render("~/Content/Form.css")
+<h2>AddSalary</h2>
+
+@using (Html.BeginForm("AddSalary", "Salary", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.EmployeeId);
+    <br />
+    @Html.TextBoxFor(m => m.EmployeeId, new {placeholder="Employee ID"});
+    @Html.ValidationMessageFor(m => m.EmployeeId);
+    <br />
+    @Html.LabelFor(m => m.SalaryAmount);
+    <br />
+    @Html.TextBoxFor(m => m.SalaryAmount, new { placeholder = " Salary" });
+    @Html.ValidationMessageFor(m => m.SalaryAmount);
+    <br />
+
+    <input type="submit" value="submit" />
+}

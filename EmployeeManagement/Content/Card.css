@@ -1,0 +1,45 @@
+﻿.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    text-align:left;
+}
+.card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+.containers {
+    padding: 2px 16px;
+}
+.p{
+    font-size:medium;
+}
+a.edit:hover, a.edit:active {
+    background-color: #808080;
+    color: #808080;
+}
+
+a.edit:link, a.edit:visited {
+    background-color: deeppink;
+    color: black;
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+}
+
+a.Delete:hover, a.Delete:active {
+    background-color: #c10000;
+    color: deeppink;
+}
+
+a.Delete:link, a.Delete:visited {
+    background-color:navy;
+    color: deeppink;
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    float:right;
+}

@@ -1,0 +1,27 @@
+﻿@model System.Data.DataTable
+@{
+    ViewBag.Title = "viewproject";
+    //Layout = null;
+}
+<div id="project">
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/ProjectScript.js"></script>
+    @Styles.Render("~/Content/Table.css")
+    @Styles.Render("~/Content/hoverdropdown.css")
+
+    <h2>Project Details</h2>
+    <div class="dropdown">
+        <button class="dropbtn"><i class="glyphicon glyphicon-filter"></i>Filter</button>
+        <div class="dropdown-content">
+            <a href="@Url.Action("viewprojectbystatus", "Project", new {@id=1})">Yet To Start</a>
+            <a href="@Url.Action("viewprojectbystatus", "Project", new {@id=2})">On Going</a>
+            <a href="@Url.Action("viewprojectbystatus", "Project", new {@id=3})">Completed</a>
+        </div>
+    </div>
+    <table id="tblproject" class="tables">
+        
+     @Html.Partial("projecttable",Model)
+      
+    </table>
+
+</div>

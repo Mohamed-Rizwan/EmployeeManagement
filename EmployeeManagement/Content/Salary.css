@@ -1,0 +1,15 @@
+﻿a.salaryindex:link, a.salaryindex:visited {
+    background-color: #161678;
+    color: white;
+    padding: 30px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+a.salaryindex:hover, a.salaryindex:active {
+    background-color: navy;
+    color: deeppink;
+}
+

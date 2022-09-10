@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@Styles.Render("~/Content/team.css")
+
+<center>
+
+    <a class="add" href="@Url.Action("teams","Teams")"><i class=" glyphicon glyphicon-eye-open" style="font-size: 25px; color: white;"></i><h1>View Team</h1></a>
+
+    <a class="view" href="@Url.Action("addteams","Teams")"><i class="glyphicon glyphicon-plus" style="font-size: 25px; color: white;"></i><h1>Add Team</h1></a>
+</center>

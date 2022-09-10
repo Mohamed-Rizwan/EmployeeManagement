@@ -1,0 +1,44 @@
+﻿html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.header {
+    background-color: deeppink;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.topnav {
+    overflow: hidden;
+    background-color: navy;
+}
+
+ .topnav a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 5px 5px;
+        text-decoration: none;
+    }
+
+  .topnav a:hover {
+            color: deeppink;
+        }
+
+.ul {
+    margin: 5px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+
+.li {
+    float: left;
+    display: block;
+    padding: 10px;
+}

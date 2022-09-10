@@ -1,0 +1,71 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<EmployeeManagement.Models.EmployeeDetails>
+
+
+@{
+    ViewBag.Title = "search";
+}
+@Styles.Render("~/Content/Table.css")
+@Styles.Render("~/Content/Search.css")
+
+<h2 style="text-align:center">Search Employee</h2>
+
+@using (Html.BeginForm("search", "Employee", FormMethod.Post))
+{
+
+    <div style="text-align:center;">
+        <i class="glyphicon glyphicon-search"></i> <input type="text" name="search" id="search"  value= @ViewBag.pass > <input type="submit" value="Search" />
+    </div>
+
+}
+
+<p></p>
+
+
+@if (Model.Count > 0)
+{
+
+    <table class="tables">
+        @{
+            <tr>
+                <th>Employee Name</th>
+                <th>Job Role</th>
+                <th></th>
+                <th></th>
+                <th></th>
+
+            </tr>
+
+
+            foreach (var item in Model)
+            {
+    <tr>
+        <td>@Html.DisplayFor(m => item.EmpName)</td>
+        <td>@Html.DisplayFor(m => item.Jobrole)</td>
+        <td><a href="@Url.Action("EmpView", "Employee", new { @id = item.EmpId })">View</a></td>
+        <td><a class="edit" href="@Url.Action("Edit", "Employee", new { @id = item.EmpId })">Edit</a></td>
+        <td><a class="Delete" href="@Url.Action("Delete", "Employee", new { @id = item.EmpId})" onclick="return confirm('Are you sure of deleting?');">Delete</a></td>
+
+
+    </tr>
+
+
+            }
+
+
+
+        }
+
+    </table>
+    <center> @Html.PagedListPager(Model, page => Url.Action("searchby", new { @search = @ViewBag.pass,@page=page  }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation=true })</center>
+}
+else
+{
+    <img src="~/img/datanotavailable.png" style="display: block; margin-left: auto; margin-right: auto;  height: 400px; width: 100%; " />
+
+}
+
+
+
+

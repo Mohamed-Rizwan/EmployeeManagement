@@ -1,0 +1,84 @@
+﻿@using EmployeeManagement.Models
+@model EmployeeManagement.Models.EmployeeDetails
+
+@{
+    ViewBag.Title = "Addemp";
+}
+@Styles.Render("~/Content/Form.css")
+@*@Scripts.Render("~/Scripts/validateform.js")*@
+<script src="~/Scripts/CascadingDropdown.js"></script>
+<h2>Add Employee</h2>
+
+
+
+@using (Html.BeginForm("addemp", "Employee", FormMethod.Post))
+{
+    <div>
+
+
+        @Html.LabelFor(m => m.EmpName)
+        <br />
+        @Html.TextBoxFor(m => m.EmpName, new { Class = "Formtexts", placeholder = "Name", @onblur = "namevalidation(this);" })
+        <label id="lblname" style="color:red; visibility:hidden;">Name Required</label>
+        <span id="textname"></span>
+        @Html.ValidationMessageFor(m => m.EmpName)
+
+        <br />
+        @Html.LabelFor(m => m.gender)
+        <br />
+        @Html.DropDownListFor(m => m.gender, new List<SelectListItem> { new SelectListItem { Text = "Male", Value = "Male" }, new SelectListItem { Text = "Female", Value = "Female" } }, "-select-")
+        <label id="lblgender" style="color:red; visibility:hidden;">Gender Required</label>
+        @Html.ValidationMessageFor(m => m.gender)
+
+        <br />
+
+        @Html.LabelFor(m => m.Email)
+        <br />
+        @Html.TextBoxFor(m => m.Email, new { placeholder = "Email", @onblur = "checkemail();", @onchange = "emailvalidation(this);" })
+        <label id="lblemail" style="color:red; visibility:hidden;">Email Required</label>
+        <span id="textemail"></span>
+        @Html.ValidationMessageFor(m => m.Email)
+
+        <br />
+
+        @Html.LabelFor(m => m.PhoneNumber)
+        <br />
+        @Html.TextBoxFor(m => m.PhoneNumber, new { placeholder = "Phone Number", @onblur = "phonenumbervalidation(this)" })
+        <label id="lblphone" style="color:red; visibility:hidden;">PhoneNumber Required</label>
+        <span id="textphone"></span>
+        @Html.ValidationMessageFor(m => m.PhoneNumber)
+
+        <br />
+
+        @Html.LabelFor(m => m.TeamId)
+        <br />
+        @Html.DropDownListFor(m => m.TeamId, ViewBag.TeamList as SelectList, "-select-", new { @onchange= "jobrolesforteam()" })
+
+        <label id="lblteam" style="color:red; visibility:hidden;">Team Required</label>
+        @Html.ValidationMessageFor(m => m.TeamId)
+
+        <br />
+
+        @Html.LabelFor(m => m.Jobrole)
+        <br />
+        <select id="Jobrole" name="Jobrole">
+           
+        </select>
+        <label id="lbljobrole" style="color:red; visibility:hidden;">Job Role Required</label>
+        @Html.ValidationMessageFor(m => m.Jobrole)
+
+        <br />
+
+        @Html.LabelFor(m => m.DateofJoining)
+        <br />
+        @Html.TextBoxFor(m => m.DateofJoining, new { placeholder = "Date of Joining", type = "date", style = "padding: 12px 20px; margin: 8px 0; display: inline - block; border: 1px solid #ccc; border - radius: 5px; box - sizing: border - box; width=100%;" })
+        <label id="lbldoj" style="color:red; visibility:hidden;">Date of Joining Required</label>
+        @Html.ValidationMessageFor(m => m.DateofJoining)
+        <br />
+        <input type="submit" value="submit" onclick=" return validate();">
+    </div>
+
+
+    }
+
+

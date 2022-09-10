@@ -1,0 +1,32 @@
+﻿@using EmployeeManagement.Models
+@model EmployeeManagement.Models.ProjectDetails
+@{
+    ViewBag.Title = "addprojects";
+}
+@Styles.Render("~/Content/Form.css")
+
+<h2>Addprojects</h2>
+
+@using (Html.BeginForm("addprojects", "Project", FormMethod.Post))
+{ 
+   <div>
+       @Html.LabelFor(m => m.ProjectName)
+       <br />
+       @Html.TextBoxFor(m => m.ProjectName, new {placeholder="Project Name"})
+       @Html.ValidationMessageFor(m => m.ProjectName)
+
+       <br />
+
+       @Html.LabelFor(m => m.TeamId)
+       <br />
+       @Html.DropDownList("TeamId", (IEnumerable<SelectListItem>)ViewBag.TeamId as SelectList, "--Select--")
+       @Html.ValidationMessageFor(m => m.TeamId)
+
+       <br />
+
+       <input type="submit" value="submit" />
+   </div> 
+
+       
+}
+

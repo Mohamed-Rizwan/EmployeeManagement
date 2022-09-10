@@ -1,0 +1,22 @@
+﻿@using EmployeeManagement.Models
+@model EmployeeManagement.Models.EmployeeDetails
+@{
+    ViewBag.Title = "hikebyteam";
+}
+
+<h2>hikebyteam</h2>
+
+@using (Html.BeginForm("hikebyteamid","Salary",FormMethod.Post))
+{
+    @Html.LabelFor(m => m.TeamId)
+    <br />
+    @Html.DropDownListFor(m => m.TeamId, ViewBag.TeamList as SelectList, "-select-")
+    @Html.ValidationMessageFor(m => m.TeamId)
+    <br />
+
+
+    <br />
+    <input type="number" value="number" name="hike" placeholder="Hike Percentage" />
+    <br />
+    <input type="Submit" value="Submit" />
+}

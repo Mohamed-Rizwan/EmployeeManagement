@@ -1,0 +1,30 @@
+﻿@model System.Data.DataSet
+@{
+    ViewBag.Title = "viewmembers";
+}
+@Styles.Render("~/Content/Table.css")
+@Styles.Render("~/Content/team.css")
+
+<h2>Team Details</h2>
+<h3>Team Name : @Model.Tables[1].Rows[0][0]</h3>
+<h3>Manager : @Model.Tables[1].Rows[0][1]</h3>
+<a class="add" href="@Url.Action("viewprojectbyteam", "Project", new {@id= Model.Tables[1].Rows[0][2] })">View project</a>
+<h4>Team Members</h4>
+<table class="tables">
+    <tr>
+        <th>Employee Name</th>
+        <th>Job Role</th>
+        <th></th>
+    </tr>
+    @{
+        for (int i = 0; i < Model.Tables[0].Rows.Count; i++)
+        {
+            <tr>
+                <td>@Model.Tables[0].Rows[i][1]</td>
+                <td>@Model.Tables[0].Rows[i][2]</td>
+                <td><a href="@Url.Action("EmpView", "Employee", new { @id = Model.Tables[0].Rows[i][0] })">View</a></td>
+            </tr>
+
+        }
+    }
+</table>

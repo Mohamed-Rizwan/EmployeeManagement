@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/Content/Salary.css" rel="stylesheet" />
+
+<div>
+    <a class="salaryindex" href="@Url.Action("AddSalary","Salary")"><h2>Add Salary Details</h2></a>
+
+    <a class="salaryindex" href="@Url.Action("hike","Salary")"><h1>  Hike  </h1></a>
+</div>
+
+<br />
+<div>
+    <a class="salaryindex" href="@Url.Action("viewsalary","Salary")"><h1>  View Salary  </h1></a>
+
+    <a class="salaryindex" href="@Url.Action("payslip","Salary")"><h1>  Payslip  </h1></a>
+</div>
+
