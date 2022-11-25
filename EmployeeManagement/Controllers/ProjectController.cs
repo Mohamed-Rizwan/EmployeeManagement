@@ -10,6 +10,7 @@ using EmployeeManagement.ADO_commands;
 
 namespace EmployeeManagement.Controllers
 {
+    [Authorize]
     public class ProjectController : Controller
     {
       

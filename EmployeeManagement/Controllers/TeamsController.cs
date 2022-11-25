@@ -10,6 +10,7 @@ using EmployeeManagement.ADO_commands;
 
 namespace EmployeeManagement.Controllers
 {
+    [Authorize]
     public class TeamsController : Controller
     {
         public string cs = @"Data Source = IND-600\SQLEXPRESS ; Initial Catalog = EmployeeManagement ; Integrated Security= True";

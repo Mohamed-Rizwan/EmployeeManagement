@@ -2,10 +2,20 @@
 @{
     ViewBag.Title = "viewsalary";
 }
+<link href="~/Content/Salary.css" rel="stylesheet" />
+<center><h2>Salary Details</h2></center>
 
-<h2>viewsalary</h2>
+<div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-3" style="background-color:navy">
+        <a class ="salaryindex" href="@Url.Action("viewsalarybyemployee","salary")"><h1>Employee</h1></a>
+    </div>
 
-<a href="@Url.Action("viewsalarybyemployee","salary")">viewsalarybyemployee</a>
-<br />
-<br />
-<a href="@Url.Action("viewsalarybyteam","salary")">viewsalarybyteam</a>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-3" style="background-color:navy">
+        <a class ="salaryindex" href="@Url.Action("viewsalarybyteam","salary")"><h1>Team</h1> </a>
+
+    </div>
+
+   
+</div>

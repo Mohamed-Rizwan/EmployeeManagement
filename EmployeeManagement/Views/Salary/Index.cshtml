@@ -3,17 +3,30 @@
     ViewBag.Title = "Index";
 }
 <link href="~/Content/Salary.css" rel="stylesheet" />
+<h1> </h1>
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-3" style="background-color:navy">
+        <a class="salaryindex" href="@Url.Action("AddSalary","Salary")"><h2>Add Salary Details</h2></a>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-3" style="background-color:navy">
+        <a class="salaryindex" href="@Url.Action("hike","Salary")"><h1>  Hike  </h1></a>
+    </div>
+</div>
+<div class="row">
+    <h1> </h1>
 
-<div>
-    <a class="salaryindex" href="@Url.Action("AddSalary","Salary")"><h2>Add Salary Details</h2></a>
-
-    <a class="salaryindex" href="@Url.Action("hike","Salary")"><h1>  Hike  </h1></a>
 </div>
 
-<br />
-<div>
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class=" col-lg-3" style="background-color:navy">
     <a class="salaryindex" href="@Url.Action("viewsalary","Salary")"><h1>  View Salary  </h1></a>
-
-    <a class="salaryindex" href="@Url.Action("payslip","Salary")"><h1>  Payslip  </h1></a>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-3" style="background-color:navy">
+        <a class="salaryindex" href="@Url.Action("payslip","Salary")"><h1>  Payslip  </h1></a>
+    </div>
 </div>
 

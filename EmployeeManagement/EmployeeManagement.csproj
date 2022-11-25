@@ -155,7 +155,14 @@
     <Content Include="Content\Form.css" />
     <Content Include="Content\Home.css" />
     <Content Include="Content\hoverdropdown.css" />
+    <Content Include="Content\img\404Error.png" />
+    <Content Include="Content\img\background.jpg" />
+    <Content Include="Content\img\datanotavailable.png" />
+    <Content Include="Content\img\datanotfound.jpg" />
+    <Content Include="Content\img\lock-icon.png" />
+    <Content Include="Content\img\user-icon.png" />
     <Content Include="Content\Layout.css" />
+    <Content Include="Content\Login.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\project.css" />
     <Content Include="Content\Salary.css" />
@@ -167,8 +174,12 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="img\404Error.png" />
+    <Content Include="img\500Error.png" />
+    <Content Include="img\background.jpg" />
     <Content Include="img\datanotavailable.png" />
     <Content Include="img\datanotfound.jpg" />
+    <Content Include="img\lock-icon.png" />
+    <Content Include="img\user-icon.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -228,6 +239,7 @@
     <Content Include="Views\Shared\NotFound.cshtml" />
     <Content Include="Views\Shared\InternalServerError.cshtml" />
     <Content Include="Views\Shared\projecttable.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

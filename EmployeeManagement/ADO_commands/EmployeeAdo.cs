@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using EmployeeManagement.Models;
 using System.Text;
 using System.Reflection;
+using System.Web.Helpers;
 
 namespace EmployeeManagement.ADO_commands
 {
@@ -218,6 +219,21 @@ namespace EmployeeManagement.ADO_commands
             }
             return (tbljobs);
 
+        }
+
+        public Boolean ValidateUser(EmployeeDetails loginDetails)
+        {
+            Boolean validation;
+            using (SqlConnection conn = new SqlConnection(cs)) {
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                conn.Open();
+                SqlCommand command = new SqlCommand("Select 1 from EmployeeDetails where Empemail=@email And Empid=@password", conn);
+                command.Parameters.AddWithValue("@email",loginDetails.Email );
+                command.Parameters.AddWithValue("@password",loginDetails.EmpId);
+                validation=Convert.ToBoolean(command.ExecuteScalar());
+            }
+            return validation;
+                
         }
 
         public string DataTableToJSONWithStringBuilder(DataTable table)

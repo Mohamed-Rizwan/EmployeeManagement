@@ -13,9 +13,11 @@ using PagedList.Mvc;
 
 namespace EmployeeManagement.Controllers
 {
+    [Authorize]
     public class EmployeeController : Controller
     {
         // GET: Employee
+    
         public ActionResult Index()
         {
             throw new Exception("Oops..");

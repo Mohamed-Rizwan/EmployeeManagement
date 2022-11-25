@@ -2,14 +2,26 @@
 @{
     ViewBag.Title = "hike";
 }
+<link href="~/Content/Salary.css" rel="stylesheet" />
 
-<h2>hike</h2>
+<center><h2>Hike</h2></center>
+<div>
+    <div class="col-lg-2 "></div>
+    <div class="col-lg-2" style="background-color:navy">
+        <a class="salaryindex" href="@Url.Action("hikebyemployee","Salary")"><h2>Employee</h2></a>
+    </div>
+    <div class="col-lg-1"></div>
+   
+    <div class="col-lg-2" style="background-color:navy">
+        <a class="salaryindex" href="@Url.Action("hikebyteam","Salary")"><h2>Team</h2></a>
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-2 " style="background-color:navy">
+        <a class="salaryindex" href="@Url.Action("hiketocompany","Salary")"><h2>Company</h2></a>
+    </div>
+    
 
-<a href="@Url.Action("hikebyemployee","Salary")">Hike to Employee</a>
-<br />
-<br />
 
-<a href="@Url.Action("hikebyteam","Salary")">Hike To Team</a>
-<br />
-<br />
-<a href="@Url.Action("hiketocompany","Salary")">Hike To Company</a>
+
+</div>
+

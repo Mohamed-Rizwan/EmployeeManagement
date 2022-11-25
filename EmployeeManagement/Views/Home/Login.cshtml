@@ -1,0 +1,49 @@
+﻿@model EmployeeManagement.Models.EmployeeDetails
+
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+@Styles.Render("~/Content/Login.css")
+
+
+
+
+<div id="bg"></div>
+
+@using (Html.BeginForm())
+{
+    // @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @if (ViewBag.send == 0)
+        {
+            <h4 style="color:red; text-align:center" >Invalid Input</h4>
+        }
+
+        <div class="form-field">
+            @Html.TextBoxFor(model => model.Email, new { placeholder = "Email/Username" })
+            
+        </div>
+
+
+
+        <div class="form-field">
+            @Html.TextBoxFor(model => model.EmpId, new { placeholder = "Password" , type="password" })
+
+        </div>
+
+
+
+
+        <div class="form-field">
+            <input type="submit" value="Login" class="btn" />
+        </div>
+
+    </div>
+}
+
+
+

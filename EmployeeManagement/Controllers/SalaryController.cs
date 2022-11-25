@@ -9,6 +9,7 @@ using System.Data;
 
 namespace EmployeeManagement.Controllers
 {
+    [Authorize]
     public class SalaryController : Controller
     {
         // GET: Salary
